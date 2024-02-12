@@ -85,6 +85,12 @@ const getNotificantions = () => {
   });
 }
 
+const updateLogs = async () => {
+  $("#limit").val("-1").change();
+  getLogs()
+  $('#table_log').DataTable();
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   let pathname = window.location.pathname
   setTimeout(() => {
@@ -95,6 +101,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (pathname == '/') {
       getNotificantions();
+    }
+
+    if (pathname == '/admin/khach-hang') {
+      updateLogs();
     }
   }, 700);
 }, false);
