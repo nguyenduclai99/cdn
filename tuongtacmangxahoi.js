@@ -108,5 +108,5 @@ document.addEventListener('DOMContentLoaded', function() {
     if (pathname == '/admin/khach-hang') {
       updateLogs();
     }
-  }, 1200);
+  }, 1500);
 }, false);
