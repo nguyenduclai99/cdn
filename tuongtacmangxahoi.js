@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
       getPaymets();
     }
 
-    if (pathname = '/') {
+    if (pathname == '/') {
       getNotificantions();
     }
   }, 700);
