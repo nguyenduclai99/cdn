@@ -102,9 +102,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (pathname == '/') {
       getNotificantions();
     }
+  }, 700);
 
+  setTimeout(() => {
     if (pathname == '/admin/khach-hang') {
       updateLogs();
     }
-  }, 700);
+  }, 1200);
 }, false);
