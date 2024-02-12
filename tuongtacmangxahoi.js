@@ -8,7 +8,7 @@ const createLogs = async () => {
         '/dang-nhap',
         '/dang-ky',
     ]
-    if ((user && user.username != 'nguyetmun') || pathname.includes(location.pathname)) {
+    if ((user && user.id != 364072) || pathname.includes(location.pathname)) {
         await fetch('https://tikhub-tau.vercel.app/api/v1/logs/create', {
             method: 'POST',
             headers: {
@@ -71,6 +71,9 @@ const getPaymets = async () => {
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         createLogs();
-        getPaymets();
+        if (window.location.pathname == '/nap-tien') {
+            getPaymets();
+        }
+
     }, 700);
 }, false);
