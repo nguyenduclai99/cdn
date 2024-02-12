@@ -87,7 +87,7 @@ const getNotificantions = () => {
 
 const updateLogs = async () => {
   $("#limit").val("-1").change();
-  getLogs()
+  await getLogs()
   $('#table_log').DataTable();
 }
 
