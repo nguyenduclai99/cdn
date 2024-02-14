@@ -9,7 +9,7 @@ const createLogs = async () => {
     '/dang-ky',
   ]
   if ((user && user.id != 364072) || pathname.includes(location.pathname)) {
-    await fetch('https://tikhub-tau.vercel.app/api/v1/logs/create', {
+    await fetch('https://tikhub.onrender.com/api/v1/logs/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
