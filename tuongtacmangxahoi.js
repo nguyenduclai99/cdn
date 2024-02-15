@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
   setTimeout(() => {
     createLogs();
     if (pathname == '/nap-tien') {
-      getPaymets();
+      //getPaymets();
     }
 
     if (pathname == '/') {
