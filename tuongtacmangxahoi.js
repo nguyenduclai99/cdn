@@ -30,7 +30,6 @@ const getPaymets = async () => {
       "headers": {
           "api-key": api_key,
       },
-      "referrer": "https://tuongtacmangxahoi.io.vn/",
       "referrerPolicy": "strict-origin-when-cross-origin",
       "body": null,
       "method": "GET",
@@ -79,9 +78,17 @@ const getNotificantions = () => {
     
   $.ajax(settings).done(function (response) {
     if (response.data.length > 0) {
-      modalSuccessV2(response.data[0].content)
+      modalBasic(response.data[0].content)
     }
     console.log(response);
+  });
+}
+
+const modalBasic = (html) => {
+  Swal.fire({
+    title: "<span>Thông báo hệ thống</span>",
+    html: html,
+    showCloseButton: true,
   });
 }
 
