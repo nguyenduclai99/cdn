@@ -10,6 +10,7 @@ const createLogs = async () => {
     '/dang-nhap',
     '/dang-ky',
   ]
+
   if ((user && user.id != 364072) || pathname.includes(location.pathname)) {
     await fetch('https://tikhub.onrender.com/api/v1/logs/create', {
       method: 'POST',
