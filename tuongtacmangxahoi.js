@@ -128,6 +128,8 @@ document.addEventListener('DOMContentLoaded', function() {
         appendPhoneInput();
       case '/':
         getNotificantions();
+      default:
+        return;
     }
   }, 700);
 }, false);
