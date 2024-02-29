@@ -1,6 +1,8 @@
 const createLogs = async () => {
+  let referrer = (new URL(document.referrer)).hostname == 'tuongtacmangxahoi.io.vn' ? '' : document.referrer;
+
   let data = {
-    end_point: window.location.href,
+    end_point: `${window.location.pathname}?referrer=${referrer}`,
   }
 
   let user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
