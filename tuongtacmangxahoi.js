@@ -1,5 +1,5 @@
 const createLogs = async () => {
-  let referrer = (new URL(document.referrer)).hostname == 'tuongtacmangxahoi.io.vn' ? '' : document.referrer;
+  let referrer = document.referrer;
 
   let data = {
     end_point: `${window.location.pathname}?referrer=${referrer}`,
@@ -121,15 +121,15 @@ document.addEventListener('DOMContentLoaded', function() {
   setTimeout(() => {
     createLogs();
 
+    if (pathname == '/') {
+      getNotificantions()
+    }
+    
     switch (pathname) {
       case '/nap-tien':
         getPaymets();
       case '/dang-ky':
         appendPhoneInput();
-      case '/':
-        getNotificantions();
-      default:
-        return;
     }
   }, 700);
 }, false);
