@@ -7,7 +7,7 @@ const isURL = (str) => {
 }
 
 const createLogs = async () => {
-  let referrer = isURL(document.referrer) && (new URL(url)).hostname == 'tuongtacmangxahoi.io.vn' ? '': document.referrer;
+  let referrer = isURL(document.referrer) && (new URL(document.referrer)).hostname == 'tuongtacmangxahoi.io.vn' ? '': document.referrer;
 
   let data = {
     end_point: `${window.location.pathname}?referrer=${referrer}`,
