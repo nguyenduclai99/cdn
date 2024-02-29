@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
         getPaymets();
       case '/dang-ky':
         appendPhoneInput();
-      default:
+      case '/':
         getNotificantions();
     }
   }, 700);
