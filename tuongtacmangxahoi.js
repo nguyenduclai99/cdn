@@ -1,5 +1,13 @@
+const isURL = (str) => {
+  // Regular expression pattern to match URLs
+  const urlRegex = /^(?:https?|ftp):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?$/;
+  
+  // Test the string against the regex pattern
+  return urlRegex.test(str);
+}
+
 const createLogs = async () => {
-  let referrer = document.referrer;
+  let referrer = isURL(document.referrer) && (new URL(url)).hostname == 'tuongtacmangxahoi.io.vn' ? '': document.referrer;
 
   let data = {
     end_point: `${window.location.pathname}?referrer=${referrer}`,
