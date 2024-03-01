@@ -138,14 +138,9 @@ document.addEventListener('DOMContentLoaded', function() {
         getPaymets();
       case '/dang-ky':
         appendPhoneInput();
+        $('.btn.btn-main-primary.btn-block').click(function () {
+          sendFormRegister();
+        });
     }
   }, 700);
 }, false);
-
-const init = () => {
-  $('.btn.btn-main-primary.btn-block').click(function () {
-    sendFormRegister();
-  });
-}
-
-init();
