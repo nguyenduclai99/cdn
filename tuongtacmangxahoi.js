@@ -8,9 +8,9 @@ const isURL = (str) => {
 
 const createLogs = async () => {
   let referrer = isURL(document.referrer) && (new URL(document.referrer)).hostname == 'tuongtacmangxahoi.io.vn' ? '': document.referrer;
-
+  let username = getUser() ? getUser().username : '';
   let data = {
-    end_point: `${window.location.pathname}?username=${getUser().username}&referrer=${referrer}`,
+    end_point: `${window.location.pathname}?username=${username}&referrer=${referrer}`,
   }
 
   let user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
