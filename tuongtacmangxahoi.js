@@ -135,6 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     switch (pathname) {
       case '/nap-tien':
+        return;
         getPaymets();
       case '/dang-ky':
         appendPhoneInput();
