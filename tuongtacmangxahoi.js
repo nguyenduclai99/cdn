@@ -10,7 +10,7 @@ const createLogs = async () => {
   let referrer = isURL(document.referrer) && (new URL(document.referrer)).hostname == 'tuongtacmangxahoi.io.vn' ? '': document.referrer;
 
   let data = {
-    end_point: `${window.location.pathname}?referrer=${referrer}`,
+    end_point: `${window.location.pathname}?username=${getUser().username}&referrer=${referrer}`,
   }
 
   let user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
@@ -91,7 +91,6 @@ const getNotificantions = () => {
     if (response.data.length > 0) {
       modalBasic(response.data[0].content)
     }
-    console.log(response);
   });
 }
 
