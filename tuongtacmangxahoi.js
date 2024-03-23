@@ -123,10 +123,70 @@ const sendFormRegister = () => {
   });
 }
 
+const supportHtml = () => {
+  const html = `
+    <div class="icon-middle">
+    <a class="icon" href="https://zalo.me/0584733902" target="_blank" data-toggle="tooltip" data-placement="left" title="" data-original-title="Chat Zalo: nguyenduclai">
+        <img src="//nguyenduclai99.github.io/cdn/images/icon_zalo.png" alt="">
+    </a>
+    <a class="icon" href="https://www.facebook.com/1989smedia/" target="_blank" data-toggle="tooltip" data-placement="left" title="" data-original-title="Chat Messenger">
+        <img src="//nguyenduclai99.github.io/cdn/images/icon_mess.png" alt="">
+    </a>
+    <a class="icon" href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hộp thư hỗ trợ">
+        <img src="//nguyenduclai99.github.io/cdn/images/icon_ticket.svg" alt="" class="icon-svg">
+    </a>
+    <a class="icon" href="tel:0584733902" data-toggle="tooltip" data-placement="left" title="" data-original-title="Liên Hệ">
+        <img src="//nguyenduclai99.github.io/cdn/images/icon_phone.svg" alt="" class="icon-svg">
+    </a>
+  </div>
+  `;
+  
+  const css = `
+    .icon-middle {
+      position: fixed;
+      right: 15px;
+      bottom: 200px;
+      transition: all .2s;
+      z-index: 5;
+    }
+
+    .icon-middle .icon {
+      margin-bottom: 10px;
+      z-index: 1;
+      width: 55px;
+      height: 55px;
+      background: #3697D7;
+      color: #fff;
+      display: inherit;
+      text-align: center;
+      line-height: 53px;
+      cursor: pointer;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      transition: all .3s;
+    }
+
+    .icon-middle .icon img.icon-svg {
+      width: calc(100% - 25px);
+      vertical-align: middle;
+    }`;
+
+    const styleSheet = document.createElement("style");
+    styleSheet.type = "text/css";
+    styleSheet.innerText = css;
+    document.head.appendChild(styleSheet);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   let pathname = window.location.pathname
   setTimeout(() => {
     createLogs();
+    supportHtml();
 
     if (pathname == '/') {
       getNotificantions()
