@@ -140,6 +140,8 @@ const supportHtml = () => {
     </a>
   </div>
   `;
+  // Append the HTML just before the closing </body> tag
+  document.body.insertAdjacentHTML('beforeend', html);
   
   const css = `
     .icon-middle {
