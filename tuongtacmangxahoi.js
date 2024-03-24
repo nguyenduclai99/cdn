@@ -94,9 +94,9 @@ const getNotificantions = () => {
   });
 }
 
-const modalBasic = (html) => {
+const modalBasic = (html, title = "<span>Thông báo hệ thống</span>") => {
   Swal.fire({
-    title: "<span>Thông báo hệ thống</span>",
+    title: title,
     html: html,
     showCloseButton: true,
   });
@@ -185,6 +185,41 @@ const supportHtml = () => {
     document.head.appendChild(styleSheet);
 }
 
+const getTotalAmount = async () => {
+  try {
+    api_key = getApiKey();
+    var settings = {
+      "url": "https://1blike.com/api/admin/khach-hang?key=&limit=-1",
+      "method": "GET",
+      "headers": {
+        "api-key": api_key,
+      },
+    };
+      
+    $.ajax(settings).done(function (response) {
+      if (response.data.length > 0) {
+        let totalAmount = 0;
+        let unusedAmount = 0;
+        response.data.forEach(user => {
+          if (![364072, 364738].includes(user.id)) {
+            totalAmount += user.total_recharge;
+            unusedAmount += user.coin;
+          }
+        });
+
+        let html = `
+          <p> Tổng nạp: ${new Intl.NumberFormat("de-DE").format(totalAmount)}đ </p>
+          <p> Còn lại: ${new Intl.NumberFormat("de-DE").format(unusedAmount)}đ </p>
+        `;
+        modalBasic(html, '<span>Thống kê</span>')
+        console.log(totalAmount, unusedAmount);
+      }
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   let pathname = window.location.pathname
   setTimeout(() => {
@@ -204,6 +239,8 @@ document.addEventListener('DOMContentLoaded', function() {
         $('.btn.btn-main-primary.btn-block').click(function () {
           sendFormRegister();
         });
+      case '/admin/khach-hang':
+        getTotalAmount();
     }
   }, 700);
 }, false);
