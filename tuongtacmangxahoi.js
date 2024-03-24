@@ -176,6 +176,7 @@ const supportHtml = () => {
     .icon-middle .icon img.icon-svg {
       width: calc(100% - 25px);
       vertical-align: middle;
+      margin-top: 10px;
     }`;
 
     const styleSheet = document.createElement("style");
