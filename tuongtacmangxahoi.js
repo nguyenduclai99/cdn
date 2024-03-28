@@ -103,7 +103,7 @@ const modalBasic = (html, title = "<span>Thông báo hệ thống</span>") => {
 }
 
 const appendPhoneInput = () => {
-  let phoneInput = $('<div class="form-group"> <label>Số điện thoại</label> <input class="form-control" name="phone" placeholder="nhập số điện thoại" type="number"> </div>')
+  let phoneInput = $('<div class="form-group"> <label>Số điện thoại</label> <input class="form-control" name="phone" placeholder="nhập số điện thoại" type="number" required> </div>')
   $('.btn.btn-main-primary.btn-block').before(phoneInput);
 }
 
