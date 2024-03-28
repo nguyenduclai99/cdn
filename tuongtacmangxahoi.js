@@ -129,11 +129,8 @@ const supportHtml = () => {
     <a class="icon" href="https://zalo.me/0584733902" target="_blank" data-toggle="tooltip" data-placement="left" title="" data-original-title="Chat Zalo: nguyenduclai">
         <img src="//nguyenduclai99.github.io/cdn/images/icon_zalo.png" alt="">
     </a>
-    <a class="icon" href="https://www.facebook.com/1989smedia/" target="_blank" data-toggle="tooltip" data-placement="left" title="" data-original-title="Chat Messenger">
+    <a class="icon" href="https://www.facebook.com/tuongtactudong.comm" target="_blank" data-toggle="tooltip" data-placement="left" title="" data-original-title="Chat Messenger">
         <img src="//nguyenduclai99.github.io/cdn/images/icon_mess.png" alt="">
-    </a>
-    <a class="icon" href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hộp thư hỗ trợ">
-        <img src="//nguyenduclai99.github.io/cdn/images/icon_ticket.svg" alt="" class="icon-svg">
     </a>
     <a class="icon" href="tel:0584733902" data-toggle="tooltip" data-placement="left" title="" data-original-title="Liên Hệ">
         <img src="//nguyenduclai99.github.io/cdn/images/icon_phone.svg" alt="" class="icon-svg">
@@ -208,8 +205,8 @@ const getTotalAmount = async () => {
         });
 
         let html = `
-          <p> Tổng nạp: ${new Intl.NumberFormat("de-DE").format(totalAmount)}đ </p>
-          <p> Còn lại: ${new Intl.NumberFormat("de-DE").format(unusedAmount)}đ </p>
+          <p> Tổng nạp: ${new Intl.NumberFormat("de-DE").format(totalAmount)} đ </p>
+          <p> Còn lại: ${new Intl.NumberFormat("de-DE").format(unusedAmount)} đ </p>
         `;
         modalBasic(html, '<span>Thống kê</span>')
         console.log(totalAmount, unusedAmount);
