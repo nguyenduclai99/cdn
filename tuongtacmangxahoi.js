@@ -217,6 +217,14 @@ const getTotalAmount = async () => {
   }
 }
 
+const notifyBuffViewStoryFb = () => {
+  const html = `
+    <p> Mọi người nên chia nhỏ đơn để mua tốc độ sẽ nhanh và lên ổn định hơn:</p>
+    <p> Ví dụ 1000 view mọi người chia thành 5 lần mua 200 view, xong gói cũ bắt đầu mua gói mới.</p>
+  `
+  modalBasic(html)
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   let pathname = window.location.pathname
   setTimeout(() => {
@@ -238,6 +246,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       case '/admin/khach-hang':
         getTotalAmount();
+      case '/facebook-view-story':
+        notifyBuffViewStoryFb()
     }
   }, 700);
 }, false);
