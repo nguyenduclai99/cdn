@@ -1,7 +1,7 @@
 var imageElement1 = document.querySelector('.qr-payment .img-fluid');
 
 if (imageElement1)  {
-    imageElement1.src = `https://img.vietqr.io/image/acb-14182841-print.png?accountName=Nguyen%20Duc%20Lai&addInfo=ttn%20${userData.id}`;
+    imageElement1.src = `https://api.vietqr.io/image/970416-14182841-24LAL8H.jpg?accountName=NGUYEN%20DUC%20LAI&addInfo=ttn%20${userData.id}`;
     imageElement1.style.width = "300px";
 }
 
