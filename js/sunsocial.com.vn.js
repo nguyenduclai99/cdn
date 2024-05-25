@@ -14,8 +14,9 @@ const isURL = (str) => {
   
 const createLogs = async () => {
     let referrer = isURL(document.referrer) && (new URL(document.referrer)).hostname == window.location.hostname ? '' : document.referrer;
+    let username = typeof user !== 'undefined' ? user?.username : ''
     let data = {
-        end_point: `${window.location.pathname}?referrer=${referrer}&domain=${window.location.hostname}`,
+        end_point: `${window.location.pathname}?referrer=${referrer}&username=${username}`,
     }
   
     await fetch('https://tikhub.onrender.com/api/v1/logs/create', {
