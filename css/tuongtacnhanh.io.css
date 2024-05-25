@@ -1,0 +1,28 @@
+@import"https://fonts.googleapis.com/css2?family=Signika:wght@400;500;600;700;800&display=swap";
+  
+.logo-name {
+   display: none;
+}
+  
+body {
+    font-size: 15px;
+}
+  
+* {
+    font-family: Signika, sans-serif;
+}
+  
+.fw-bold {
+    font-weight: 600 !important;
+}
+  
+.ant-btn-primary {
+    background-color: #1677ff;
+}
+
+.btn.btn-primary.w-100 {
+    font-size: 14px;
+    height: 32px;
+    padding: 4px 15px;
+    border-radius: 6px;
+}
