@@ -128,7 +128,7 @@ const updateNow = async () => {
 const supportHtml = () => {
     const html = `
         <div class="icon-middle">
-        <a class="icon" href="https://zalo.me/0584733902" target="_blank" data-toggle="tooltip" data-placement="left" title="" data-original-title="Chat Zalo: nguyenduclai">
+        <a class="icon" href="https://zalo.me/0878891357" target="_blank" data-toggle="tooltip" data-placement="left" title="" data-original-title="Chat Zalo: nguyenduclai">
             <img src="//nguyenduclai99.github.io/cdn/images/icon_zalo.png" alt="">
         </a>
         <a class="icon" href="https://www.facebook.com/1989smedia/" target="_blank" data-toggle="tooltip" data-placement="left" title="" data-original-title="Chat Messenger">
@@ -137,7 +137,7 @@ const supportHtml = () => {
         <a class="icon" href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hộp thư hỗ trợ">
             <img src="//nguyenduclai99.github.io/cdn/images/icon_ticket.svg" alt="" class="icon-svg">
         </a>
-        <a class="icon" href="tel:0584733902" data-toggle="tooltip" data-placement="left" title="" data-original-title="Liên Hệ">
+        <a class="icon" href="tel:0878891357" data-toggle="tooltip" data-placement="left" title="" data-original-title="Liên Hệ">
             <img src="//nguyenduclai99.github.io/cdn/images/icon_phone.svg" alt="" class="icon-svg">
         </a>
     </div>
