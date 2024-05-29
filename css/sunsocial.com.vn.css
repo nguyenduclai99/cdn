@@ -68,5 +68,5 @@ span.badge.badge-pill.badge-blue {
 }
 
 .form-control-sm {
-    height: (1.5em + 0.5rem + 2px);
+    height: calc(1.5em + 0.5rem + 2px);
 }
