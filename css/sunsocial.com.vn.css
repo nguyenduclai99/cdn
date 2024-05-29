@@ -1,3 +1,14 @@
+@import"https://fonts.googleapis.com/css2?family=Signika:wght@400;500;600;700;800&display=swap";
+
+  
+body {
+    font-size: 15px;
+}
+  
+* {
+    font-family: Signika, sans-serif;
+}
+
 .form-control {
     border-radius: 0.25em;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
@@ -50,4 +61,8 @@ span.badge.badge-pill.badge-blue {
 
 .btn-primary {
     border-radius: 0.25em!important;
+}
+
+.card {
+    border-radius: 0.25em;
 }
