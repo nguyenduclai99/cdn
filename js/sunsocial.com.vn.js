@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+    changeDocumentApi();
+
     setTimeout(() => {
         createLogs();
     }, 700);
@@ -26,4 +28,19 @@ const createLogs = async () => {
         },
         body: JSON.stringify(data) 
     })
-}  
+}
+
+const changeDocumentApi = () => {
+    // Get all anchor tags
+    const anchorTags = document.querySelectorAll('a');
+
+    // Filter anchor tags with href starting with the specified URL
+    const filteredAnchors = Array.from(anchorTags).filter(anchor => 
+        anchor.href.startsWith('https://documenter.getpostman.com')
+    );
+
+    // Change the href attribute for each filtered anchor
+    filteredAnchors.forEach(anchor => {
+        anchor.href = 'https://documenter.getpostman.com/view/9290027/2sA3QtdWDu';
+    });
+}
