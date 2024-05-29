@@ -30,3 +30,24 @@ span.badge.badge-pill.badge-blue {
     white-space: nowrap;
     padding: 2px 4px;
 }
+
+.col-sm-9.bold .card {
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: all .3s;
+    color: #000;
+    font-weight: 500;
+}
+
+.note-content-service-server p {
+    color: #000;
+    font-weight: 400;
+}
+
+.card-body {
+    border-radius: 0.25em;
+}
+
+.btn-primary {
+    border-radius: 0.25em!important;
+}
