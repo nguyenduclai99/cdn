@@ -1,0 +1,32 @@
+.form-control {
+    border-radius: 0.25em;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+}
+
+
+span.badge.badge-pill.badge-blue {
+    padding: 2px 4px;
+    color: red;
+    font-weight: 600;
+    background: none;
+}
+
+.custom-control label span[name="nameServer"]:after {
+    padding: 2px 4px;
+    background-color: green;
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.custom-control.price-disabled label span[name="nameServer"]:after {
+    background-color: orangered;
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    font-size: 11px;
+    white-space: nowrap;
+    padding: 2px 4px;
+}
