@@ -1,12 +1,9 @@
-@import"https://fonts.googleapis.com/css2?family=Signika:wght@400;500;600;700;800&display=swap";
-
-  
 body {
     font-size: 15px;
 }
   
 * {
-    font-family: Signika, sans-serif;
+    font-size: 15px;
 }
 
 .form-control {
