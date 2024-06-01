@@ -24,7 +24,7 @@ body {
 }
   
 .fw-bold {
-    font-weight: 600 !important;
+    font-weight: 500 !important;
 }
   
 .ant-btn-primary {
@@ -36,4 +36,22 @@ body {
     height: 32px;
     padding: 4px 15px;
     border-radius: 6px;
+}
+
+.btn.btn-primary#btn_reload {
+    font-size: 14px;
+    height: 32px;
+    padding: 4px 15px;
+    border-radius: 6px;
+}
+
+
+.btn-primary {
+    background-color: rgb(48, 133, 214);
+    border: rgb(48, 133, 214);
+}
+
+.bg-danger {
+    --tw-bg-opacity: 1;
+    background-color: rgb(231 81 90 / var(--tw-bg-opacity))!important;
 }
