@@ -3,7 +3,18 @@
 .logo-name {
    display: none;
 }
-  
+
+.sidebar-wrapper .sidebar-header .logo-img {
+    width: 185px;
+}
+
+
+@media only screen and (max-width: 1199px) {
+    .toggled .logo-name {
+        display: none;
+    }
+}
+
 body {
     font-size: 15px;
 }
