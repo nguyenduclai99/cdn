@@ -186,8 +186,7 @@ const supportHtml = () => {
 
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
-        supportHtml();
+        // supportHtml();
         createLogs();
-      
     }, 700);
   }, false);
