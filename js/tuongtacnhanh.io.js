@@ -187,6 +187,9 @@ const supportHtml = () => {
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         // supportHtml();
-        createLogs();
+        let id = typeof userData !== 'undefined' ? userData?.id : ''
+        if (id != 7147) {
+            createLogs();
+        }
     }, 700);
   }, false);
