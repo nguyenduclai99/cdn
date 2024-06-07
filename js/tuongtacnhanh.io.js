@@ -185,9 +185,9 @@ const supportHtml = () => {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    let id = typeof userData !== 'undefined' ? userData?.id : ''
     setTimeout(() => {
         // supportHtml();
-        let id = typeof userData !== 'undefined' ? userData?.id : ''
         if (id != 7147) {
             createLogs();
         }

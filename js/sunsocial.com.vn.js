@@ -1,8 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     changeDocumentApi();
 
+    let id = typeof user !== 'undefined' ? user?.id : ''
+
     setTimeout(() => {
-        createLogs();
+        if (id !== 4353) {
+            createLogs();
+        }
     }, 700);
   }, false);
 
