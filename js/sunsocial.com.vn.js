@@ -4,22 +4,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let id = typeof user !== 'undefined' ? user?.id : ''
 
-    $('input[name="radio_seeding"]').change(function() {
-        calculatePriceUsd();
-    })
-
-    $('#quantity').change(function() {
-        calculatePriceUsd();
-    })
-
-    $('#quantity').keyup(function() {
-        calculatePriceUsd();
-    });
-
     setTimeout(() => {
         if (id !== 4353) {
             createLogs();
         }
+
+        $('input[name="radio_seeding"]').change(function() {
+            calculatePriceUsd();
+        })
+    
+        $('#quantity').change(function() {
+            calculatePriceUsd();
+        })
+    
+        $('#quantity').keyup(function() {
+            calculatePriceUsd();
+        });
     }, 700);
   }, false);
 

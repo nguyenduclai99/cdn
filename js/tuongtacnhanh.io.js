@@ -213,21 +213,13 @@ const l = () => {
     return e.options.charge_by === "comment_count" && (n = parseInt($(".comment_count").text()) * o), $(".total_price").html(totalPriceHtml), n
 };
 
+const s = () => {
+    const e = $("[name=server_id]:checked").val();
+    return LIST_SERVERS.find(t => t.id == e)
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     fetchRate();
-
-    $("[name=server_id]").change(() => {
-        l();
-    });
-
-    const s = () => {
-        const e = $("[name=server_id]:checked").val();
-        return LIST_SERVERS.find(t => t.id == e)
-    };
-
-    $("#quantity").keyup(() => {
-        l()
-    });
 
     let id = typeof userData !== 'undefined' ? userData?.id : ''
     setTimeout(() => {
@@ -235,5 +227,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (id != 7147) {
             createLogs();
         }
+
+        $("[name=server_id]").change(() => {
+            l();
+        });
+    
+        $("#quantity").keyup(() => {
+            l()
+        });
     }, 700);
   }, false);
