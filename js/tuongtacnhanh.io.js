@@ -184,7 +184,51 @@ const supportHtml = () => {
     document.body.insertAdjacentHTML('beforeend', html);
 }
 
+const fetchRate = async () => {
+    const response = await fetch('https://tuongtacmangxahoi.io.vn/api/rate-vnd-usd');
+    const data = await response.json();
+    const rateUsd = data?.data?.USD;
+    localStorage.setItem('rate_usd', rateUsd)
+};
+
+const l = () => {
+    const e = s();
+    if (e === void 0) return 0;
+    const t = parseInt($("#quantity").val()),
+        o = parseFloat(e.price);
+    if (isNaN(t) || isNaN(o) || t <= 0) return 0;
+    let n = t * o;
+    if (e.options.form_type === "fb_viplike") {
+        const r = parseInt($("#num_post").val()),
+            i = parseInt($("#duration").val());
+        n *= r * i
+    } else if (e.options.form_type === "fb_eyeslive") {
+        const r = parseInt($("#duration").val());
+        n *= r
+    }
+
+    const rateUsd = localStorage.getItem('rate_usd');
+    var totalUsd = n / rateUsd;
+    var totalPriceHtml = `${new Intl.NumberFormat('de-DE').format(n)} đ | ${new Intl.NumberFormat('de-DE').format(totalUsd.toFixed(2))} USD`;
+    return e.options.charge_by === "comment_count" && (n = parseInt($(".comment_count").text()) * o), $(".total_price").html(totalPriceHtml), n
+};
+
 document.addEventListener('DOMContentLoaded', function() {
+    fetchRate();
+
+    $("[name=server_id]").change(() => {
+        l();
+    });
+
+    const s = () => {
+        const e = $("[name=server_id]:checked").val();
+        return LIST_SERVERS.find(t => t.id == e)
+    };
+
+    $("#quantity").keyup(() => {
+        l()
+    });
+
     let id = typeof userData !== 'undefined' ? userData?.id : ''
     setTimeout(() => {
         // supportHtml();
