@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
         $('#quantity').keyup(function() {
             calculatePriceUsd();
         });
+
+        selfCalculatePrice = calculatePriceUsd
     }, 700);
   }, false);
 
