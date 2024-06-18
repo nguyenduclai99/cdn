@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         $('input[name="radio_seeding"]').change(function() {
             calculatePriceUsd();
-        })
+        });
     
         $('#quantity').change(function() {
             calculatePriceUsd();
-        })
+        });
     
         $('#quantity').keyup(function() {
             calculatePriceUsd();
