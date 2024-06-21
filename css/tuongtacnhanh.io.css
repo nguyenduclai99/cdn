@@ -1,6 +1,6 @@
 @import"https://fonts.googleapis.com/css2?family=Signika:wght@400;500;600;700;800&display=swap";
   
-.logo-name {
+.logo-icon {
    display: none;
 }
 
@@ -10,7 +10,7 @@
 
 
 @media only screen and (max-width: 1199px) {
-    .toggled .logo-name {
+    .logo-icon {
         display: none;
     }
 }
@@ -54,4 +54,8 @@ body {
 .bg-danger {
     --tw-bg-opacity: 1;
     background-color: rgb(231 81 90 / var(--tw-bg-opacity))!important;
+}
+
+.badge {
+    font-weight: 500!important;
 }

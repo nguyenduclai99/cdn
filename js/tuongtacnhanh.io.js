@@ -219,7 +219,13 @@ const s = () => {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetchRate();
+    // Get the current pathname
+    var pathname = window.location.pathname;
+
+    // Check if the pathname starts with '/admin/'
+    if (!pathname.startsWith('/admin/')) {
+        fetchRate();
+    }
 
     let id = typeof userData !== 'undefined' ? userData?.id : ''
     setTimeout(() => {
@@ -227,13 +233,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (id != 7147) {
             createLogs();
         }
-
-        $("[name=server_id]").change(() => {
-            l();
-        });
-    
-        $("#quantity").keyup(() => {
-            l()
-        });
+        
+        // Check if the pathname starts with '/admin/'
+        if (!pathname.startsWith('/admin/')) {
+            $("[name=server_id]").change(() => {
+                l();
+            });
+        
+            $("#quantity").keyup(() => {
+                l()
+            });
+        }
     }, 700);
   }, false);
