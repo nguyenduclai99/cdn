@@ -218,6 +218,37 @@ const s = () => {
     return LIST_SERVERS.find(t => t.id == e)
 };
 
+
+function getModalHTML() {
+    return `
+      <div class="modal fade" id="modal-notice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-modal="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content tx-14">
+            <div class="modal-header">
+              <h6 class="modal-title" id="exampleModalLabel">Thông báo mới</h6>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h4>Follow trang cá nhân hiện tại đang hơi chậm do bị block tài nguyên nhiều. Follow page, like page, buff member group vẫn đang rất rẻ và nhanh</h4>
+              <p>Mọi người nên mua số lượng <= 1000, xong đơn cũ rồi mua đơn mới để có tốc độ ổn</p>
+              <p>Mọi thắc mắc liên hệ admin qua zalo <a href="https://zalo.me/0878891357">0878891357</a> để được giải đáp nhanh nhất</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary tx-13" data-bs-dismiss="modal">Đóng</button>
+              <button type="button" class="btn btn-primary tx-13" onclick="hideNotice()">Không hiện nữa</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+function appendAndModal() {
+    $('.page-content').append(getModalHTML());
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Get the current pathname
     var pathname = window.location.pathname;
@@ -230,10 +261,22 @@ document.addEventListener('DOMContentLoaded', function() {
     let id = typeof userData !== 'undefined' ? userData?.id : ''
     setTimeout(() => {
         // supportHtml();
+        appendAndModal();
+
         if (id != 7147) {
             createLogs();
         }
-        
+
+        const listPathName = [
+            '/service/facebook/buff-follow',
+            '/service/facebook/like-page',
+            '/service/facebook/member-group',
+        ]
+
+        if (listPathName.includes(pathname)) {
+            $('#modal-notice').modal('show');
+        }
+
         // Check if the pathname starts with '/admin/'
         if (!pathname.startsWith('/admin/')) {
             $("[name=server_id]").change(() => {
