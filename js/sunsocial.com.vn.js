@@ -40,7 +40,7 @@ const createLogs = async () => {
         end_point: `${window.location.pathname}?referrer=${referrer}&username=${username}`,
     }
   
-    await fetch('https://tikhub.onrender.com/api/v1/logs/create', {
+    await fetch('https://tikhub-tau.vercel.app/api/v1/logs/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

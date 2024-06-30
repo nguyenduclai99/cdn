@@ -1,14 +1,3 @@
-var imageElement1 = document.querySelector('.qr-payment .img-fluid');
-
-if (imageElement1)  {
-    imageElement1.src = `https://api.vietqr.io/image/970416-14182841-24LAL8H.jpg?accountName=NGUYEN%20DUC%20LAI&addInfo=ttn%20${userData.id}`;
-    imageElement1.style.width = "300px";
-}
-
-var imageElement2 = document.querySelector('.text-center.mb-4 img');
-
-if (imageElement2)  imageElement2.src = 'https://api.web2m.com/template/images/iconbank/acb.svg';
-
 const getIdPrice = (id) => {
     var form = document.getElementById(`form-${id}`);
     // Get all elements with ID 'server_price'
@@ -81,7 +70,7 @@ const createLogs = async () => {
         end_point: `${window.location.pathname}?referrer=${referrer}&id=${username}`,
     }
   
-    await fetch('https://tikhub.onrender.com/api/v1/logs/create', {
+    await fetch('https://tikhub-tau.vercel.app/api/v1/logs/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -128,7 +117,7 @@ const updateNow = async () => {
 const supportHtml = () => {
     const html = `
         <div class="icon-middle">
-        <a class="icon" href="https://zalo.me/0878891357" target="_blank" data-toggle="tooltip" data-placement="left" title="" data-original-title="Chat Zalo: nguyenduclai">
+        <a class="icon" href="https://zalo.me/nguyenduclai" target="_blank" data-toggle="tooltip" data-placement="left" title="" data-original-title="Chat Zalo: nguyenduclai">
             <img src="//nguyenduclai99.github.io/cdn/images/icon_zalo.png" alt="">
         </a>
         <a class="icon" href="https://www.facebook.com/1989smedia/" target="_blank" data-toggle="tooltip" data-placement="left" title="" data-original-title="Chat Messenger">
@@ -137,7 +126,7 @@ const supportHtml = () => {
         <a class="icon" href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hộp thư hỗ trợ">
             <img src="//nguyenduclai99.github.io/cdn/images/icon_ticket.svg" alt="" class="icon-svg">
         </a>
-        <a class="icon" href="tel:0878891357" data-toggle="tooltip" data-placement="left" title="" data-original-title="Liên Hệ">
+        <a class="icon" href="tel:nguyenduclai" data-toggle="tooltip" data-placement="left" title="" data-original-title="Liên Hệ">
             <img src="//nguyenduclai99.github.io/cdn/images/icon_phone.svg" alt="" class="icon-svg">
         </a>
     </div>
@@ -233,7 +222,7 @@ function getModalHTML() {
             <div class="modal-body">
               <h4>Follow trang cá nhân hiện tại đang hơi chậm do bị block tài nguyên nhiều, mọi người cân nhắc trước khi mua.</h4>
               <h4>Follow page, like page, buff member group vẫn đang rất rẻ và nhanh.</h4>
-              <p>Mọi thắc mắc liên hệ admin qua zalo <a href="https://zalo.me/0878891357">0878891357</a> để được giải đáp nhanh nhất</p>
+              <p>Mọi thắc mắc liên hệ admin qua zalo <a href="https://zalo.me/nguyenduclai">nguyenduclai</a> để được giải đáp nhanh nhất</p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary tx-13" data-bs-dismiss="modal">Đóng</button>
