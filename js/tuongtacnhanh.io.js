@@ -262,9 +262,9 @@ document.addEventListener('DOMContentLoaded', function() {
             '/service/facebook/member-group',
         ]
 
-        // if (listPathName.includes(pathname)) {
-        //     $('#modal-notice').modal('show');
-        // }
+        if (listPathName.includes(pathname)) {
+            $('#modal-notice').modal('show');
+        }
 
         // Check if the pathname starts with '/admin/'
         if (!pathname.startsWith('/admin/')) {
