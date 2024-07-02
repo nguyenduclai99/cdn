@@ -222,7 +222,7 @@ function getModalHTML() {
             <div class="modal-body">
               <h4>Follow trang cá nhân hiện tại đang hơi chậm do bị block tài nguyên nhiều, mọi người cân nhắc trước khi mua.</h4>
               <h4>Follow page, like page, buff member group vẫn đang rất rẻ và nhanh.</h4>
-              <p>Mọi thắc mắc liên hệ admin qua zalo <a href="https://zalo.me/nguyenduclai">nguyenduclai</a> để được giải đáp nhanh nhất</p>
+              <p>Mọi thắc mắc liên hệ admin qua zalo <a href="https://zalo.me/0878891357">0878891357</a> để được giải đáp nhanh nhất</p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary tx-13" data-bs-dismiss="modal">Đóng</button>
