@@ -1,3 +1,14 @@
+var imageElement1 = document.querySelector('.qr-payment .img-fluid');
+
+if (imageElement1)  {
+    imageElement1.src = `https://api.vietqr.io/image/970416-14182841-24LAL8H.jpg?accountName=NGUYEN%20DUC%20LAI&addInfo=ttn%20${userData.id}`;
+    imageElement1.style.width = "300px";
+}
+
+var imageElement2 = document.querySelector('.text-center.mb-4 img');
+
+if (imageElement2)  imageElement2.src = 'https://api.web2m.com/template/images/iconbank/acb.svg';
+
 const getIdPrice = (id) => {
     var form = document.getElementById(`form-${id}`);
     // Get all elements with ID 'server_price'
