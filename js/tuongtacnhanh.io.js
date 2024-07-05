@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let id = typeof userData !== 'undefined' ? userData?.id : ''
     setTimeout(() => {
         // supportHtml();
-        appendAndModal();
+        // appendAndModal();
 
         if (id != 7147) {
             createLogs();
