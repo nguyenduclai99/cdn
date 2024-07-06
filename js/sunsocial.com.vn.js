@@ -65,7 +65,7 @@ const changeDocumentApi = () => {
 }
 
 const fetchRate = async () => {
-    const response = await fetch('https://tuongtacmangxahoi.io.vn/api/rate-vnd-usd');
+    const response = await fetch('https://vnd-to-usd.vercel.app');
     const data = await response.json();
     const rateUsd = data?.data?.USD;
     localStorage.setItem('rate_usd', rateUsd)
